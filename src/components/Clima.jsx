@@ -17,12 +17,12 @@ function Clima() {
       const data = await weatherApp(cidade);
       const coordenadas = await getCurrentLocationCoords(cidade);
       if (data && coordenadas) {
-        const tempCelsius = converterKelvinParaCelcius(data.main.temp); 
+        const tempCelsius = converterKelvinParaCelcius(data.main.temp);
         setClima({
           nome: coordenadas[0].name,
           temp: tempCelsius,
           descricao: data.weather[0].description,
-          sensacao: converterKelvinParaCelcius(data.main.feels_like), 
+          sensacao: converterKelvinParaCelcius(data.main.feels_like),
           umidade: data.main.humidity,
           nomeEstado: coordenadas[0].state,
           nomePais: coordenadas[0].country,
@@ -67,7 +67,8 @@ function Clima() {
       {clima && (
         <div className="p-10 h-full text-[20px] bg-slate-200 rounded-lg space-y-3">
           <h2 className="text-[35px] font-semibold text-center">
-            {clima.nome}
+            {clima.nome} <br />
+            <span className="text-[25px]">{clima.nomeEstado}</span>
             <p className="text-[25px]">{clima.temp} °C</p>
           </h2>
           <div>

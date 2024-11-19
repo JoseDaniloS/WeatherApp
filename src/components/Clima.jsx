@@ -3,7 +3,7 @@ import {
   weatherApp,
   converterKelvinParaCelcius,
   getCurrentLocationCoords,
-} from "../WeatherAPIs";
+} from "../API/WeatherAPIs";
 
 function Clima() {
   const [cidade, setCidade] = useState("");

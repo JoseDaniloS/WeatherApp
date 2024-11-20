@@ -45,8 +45,8 @@ function Clima() {
               <p>Informe sua Cidade:</p>
               <input
                 type="text"
-                name=""
-                id=""
+                name="cidade"
+                id="cidade"
                 placeholder="Ex: Brejo Santo"
                 onChange={(e) => setCidade(e.target.value)}
                 className="p-3 rounded-lg w-full"

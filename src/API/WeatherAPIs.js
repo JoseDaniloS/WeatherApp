@@ -16,7 +16,7 @@ async function weatherCurrent(lat, lon) {
 async function getCurrentLocationCoords(cidade) {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cidade},&limit=${1}&appid=${key}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cidade},&limit=${1}&appid=${key}`
     );
 
     const data = await response.json();
